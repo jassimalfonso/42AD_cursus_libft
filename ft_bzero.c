@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:31:04 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/04 02:19:50 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/09 13:09:45 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while (n--)
-		*((char *)s + n) = 0;
+	ft_memset(s, 0, n);
 }
 
+// #include <stdio.h>
 // #include <string.h>
-
+//
 // int main(void)
 // {
-// 	char str[50];
-// 	strcpy(str, "This is string.h library function");
-// 	puts(str);
-// 	ft_bzero(str, strlen(str));
-// 	puts(str);
+// 	char str[50] = "This is string.h library function";
+// 	printf("%s\n", str);
+// 	ft_bzero(str, 0);
+// 	printf("%s\n", str);
 // 	return (0);
 // }

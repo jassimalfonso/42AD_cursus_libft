@@ -6,16 +6,25 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 01:11:25 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/06/30 01:13:36 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/09 10:20:41 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int n)
+int	ft_isdigit(int c)
 {
-	if (n >= '0' && n <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
-	else
-		return (0);
+	return (0);
 }
+
+// #include <stdio.h>
+// #include <ctype.h>
+//
+// int	main(void)
+// {
+// 	printf("A: %d | 5: %d\n", ft_isdigit('A'), ft_isdigit('5'));
+// 	printf("A: %d | 5: %d\n", isdigit('A'), isdigit('5'));
+// 	return (0);
+// }

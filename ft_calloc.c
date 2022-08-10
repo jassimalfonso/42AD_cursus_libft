@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 03:02:08 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/08 11:15:04 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/09 09:28:41 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = (void *)malloc(num);
 	if (!ptr || count == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
-	ft_bzero(ptr,	num);
+	ft_bzero(ptr, num);
 	return (ptr);
 }
