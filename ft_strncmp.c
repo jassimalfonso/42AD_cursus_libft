@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:29:08 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/07/09 18:39:35 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/11 00:01:59 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,19 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+//
+// int main(void)
+// {
+// 	char *s1;
+// 	char *s2;
+// 	int ret;
+//
+// 	s1 = "zyxbcdefgh";
+// 	s2 = "abcdwxyz";
+// 	printf("%d\n", ft_strncmp(s1, s2, 1));
+// 	printf("%d\n", strncmp(s1, s2, 1));
+// 	return (0);
+// }
