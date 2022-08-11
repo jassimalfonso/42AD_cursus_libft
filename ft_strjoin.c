@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:35:58 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/03 14:10:34 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/12 01:10:17 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,36 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new_s;
-	size_t	t_slen;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	t_slen = ft_strlen(s1) + ft_strlen(s2);
-	new_s = (char *)malloc(sizeof(char) * t_slen + 1);
-	if (!new_s || (!s1 && !s2))
+	new_s = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
+	if (!new_s || !s1 || !s2)
 		return (NULL);
 	j = 0;
-	while (*(s1 + j))
-		*(new_s + i++) = *(s1 + j++);
+	while (s1[j])
+		new_s[i++] = s1[j++];
 	j = 0;
-	while (*(s2 + j))
-		*(new_s + i++) = *(s2 + j++);
-	*(new_s + i) = '\0';
+	while (s2[j])
+		new_s[i++] = s2[j++];
+	new_s[i] = '\0';
 	return (new_s);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+//
+// int	main(void)
+// {
+// 	char *s1;
+// 	char *s2;
+// 	char *s3;
+//
+// 	s1 = "Hello this is string 1, ";
+// 	s2 = "and this is string 2.";
+// 	s3 = ft_strjoin(s1, s2);
+//
+// 	printf ("%s\n", s3);
+// 	return (0);
+// }
