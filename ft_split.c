@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:22:51 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/03 14:15:46 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/13 02:55:26 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,3 +92,26 @@ char	**ft_split(char const *s, char c)
 	container[i] = NULL;
 	return (container);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+//
+// int	main(void)
+// {
+// 	char	*the_string;
+// 	char	**the_new_string;
+// 	char	the_char;
+//
+// 	the_string = "Hello there, this is a string.";
+// 	the_char = ' ';
+// 	the_new_string = ft_split (the_string, the_char);
+// 	printf("The String: %s\n", the_string);
+// 	printf("Delimiter: %c\n", the_char);
+// 	printf("the_new_string[0] %s\n", the_new_string[0]);
+// 	printf("the_new_string[0] %s\n", the_new_string[1]);
+// 	printf("the_new_string[0] %s\n", the_new_string[2]);
+// 	printf("the_new_string[0] %s\n", the_new_string[3]);
+// 	printf("the_new_string[0] %s\n", the_new_string[4]);
+// 	printf("the_new_string[0] %s\n", the_new_string[5]);
+// 	return (0);
+// }
