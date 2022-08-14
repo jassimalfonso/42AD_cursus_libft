@@ -30,3 +30,4 @@ re: fclean all
 norm:
 	@norminette -R CheckForbiddenSourceHeader *.c
 	
+.PHONY: bonus all clean fclean re norm
