@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 11:09:04 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/03 01:50:06 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/14 16:37:24 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,17 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n >= 0 && n <= 9)
 		ft_putchar_fd(n + '0', fd);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+//
+// int main(void)
+// {
+// 	int num;
+// 	int num_fd;
+//
+// 	num = -11;
+// 	num_fd = 1;
+// 	ft_putnbr_fd(num, num_fd);
+// 	return (0);
+// }

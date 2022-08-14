@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:04:46 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/12 12:39:40 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/14 14:35:17 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	str = (char *)malloc(sizeof(*s) * (strlen(s) + 1));
+	str = (char *)malloc(sizeof(*s) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -32,10 +32,20 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-// int main(void)
+// #include <stdio.h>
+// #include <string.h>
+//
+// char f(unsigned int i, char c)
 // {
-// 	char *str = "hello";
-
-// 	printf("%s", ft_strmapi(str, &ft_putstr));
-// 	return (0);
+// 	char str;
+// 	str = c + 1;
+// 	return (str);
+// }
+//
+// int main()
+// {
+// 	char str1[] = "abc";
+// 	char* str2;
+// 	str2 = ft_strmapi(str1, *f);
+// 	printf("%s\n", str2);
 // }

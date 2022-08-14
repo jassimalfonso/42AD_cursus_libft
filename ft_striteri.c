@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 10:29:21 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/02 10:46:10 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/14 15:02:08 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,22 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+
+// #include <stdio.h>
+// #include <string.h>
+//
+// void func_char(unsigned int i, char *s)
+// {
+// 	size_t n;
+// 	n = i;
+// 	n = 0;
+// 	write(1, &s[n], 1);
+// }
+//
+// int main(void)
+// {
+// 	char *str = "hello";
+//
+// 	ft_striteri(str, &func_char);
+// 	return (0);
+// }

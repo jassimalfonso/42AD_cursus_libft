@@ -6,62 +6,62 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 10:24:33 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/01 14:54:42 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/14 14:18:30 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	the_absolute(int num)
+size_t	find_len(int num)
 {
-	if (num < 0)
-		return (num * -1);
-	return (num);
-}
+	size_t	len;
 
-int	num_size(int num)
-{
-	int	count;
-
-	count = 0;
-	if (num == 0 || num < 0)
-		count++;
-	while (num != 0)
+	len = 0;
+	if (num <= 0)
+		len++;
+	while (num)
 	{
+		len++;
 		num /= 10;
-		count++;
 	}
-	return (count);
-}
-
-int	get_right_num(int num)
-{
-	return (num % 10);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	int		num_len;
+	size_t	len;
+	long	num;
 	char	*new_s;
-	int		i;
-	int		num;
 
+	len = find_len(n);
 	num = n;
-	num_len = num_size(n);
-	new_s = (char *)malloc(sizeof(char) * num_len + 1);
-	if (n == 0)
-		new_s[0] = 0;
+	new_s = (char *)malloc((sizeof(char) * len) + 1);
 	if (!new_s)
 		return (NULL);
-	i = (num_len - 1);
-	new_s[i + 1] = '\0';
-	while (i >= 0)
-	{
-		new_s[i] = get_right_num(the_absolute(n)) + '0';
-		n /= 10;
-		i--;
-	}
 	if (num < 0)
+	{
 		new_s[0] = '-';
+		num *= -1;
+	}
+	else if (num == 0)
+		new_s[0] = '0';
+	new_s[len--] = '\0';
+	while (num)
+	{
+		new_s[len] = (num % 10) + '0';
+		num /= 10;
+		len--;
+	}
 	return (new_s);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+//
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(0));
+// 	printf("%s\n", ft_itoa(+2147483647));
+// 	printf("%s\n", ft_itoa(-2147483648));
+// 	return (0);
+// }
