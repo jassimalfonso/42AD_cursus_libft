@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:22:51 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/13 02:55:26 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:55:35 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	string_count(char const *s, char c)
 	size_t	i;
 	size_t	num_of_strings;
 
+	if (!s)
+		return (0);
 	i = 0;
 	num_of_strings = 0;
 	while (s[i])

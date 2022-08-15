@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 01:58:47 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/13 02:39:37 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/15 17:27:11 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*new_s;
 
+	if (!s1)
+		return (NULL);
 	begin = 0;
 	while (s1[begin] && in_set (s1[begin], set))
 		begin++;
