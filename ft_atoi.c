@@ -6,17 +6,27 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 18:30:52 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/15 17:27:46 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:28:15 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	num_long(unsigned long num, int sign)
+{
+	if (num >= 9223372036854775807 && sign == 1)
+		return (-1);
+	else if (num >= -9223372036854775808UL && sign == -1)
+		return (0);
+	else
+		return (42);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	int			result;
-	int			sign;
-	size_t		i;
+	long	result;
+	long	sign;
+	size_t	i;
 
 	i = 0;
 	result = 0;
@@ -34,6 +44,10 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + (nptr[i] - '0');
 		i++;
 	}
+	if (num_long (result, sign) == 0)
+		return (0);
+	else if (num_long (result, sign) == -1)
+		return (-1);
 	return ((int)(result * sign));
 }
 
@@ -51,8 +65,11 @@ int	ft_atoi(const char *nptr)
 // 	printf("ft_atoi: %d\n", ft_atoi("2147483647"));
 // 	printf("ft_atoi: %d\n\n", atoi("2147483647"));
 //
-// 	printf("ft_atoi: %d\n", ft_atoi("2147483647"));
-// 	printf("ft_atoi: %d\n\n", atoi("2147483647"));
+// 	printf("ft_atoi: %d\n", ft_atoi("-9223372036854775808"));
+// 	printf("ft_atoi: %d\n\n", atoi("-9223372036854775808"));
+//
+// 	printf("ft_atoi: %d\n", ft_atoi("9223372036854775807"));
+// 	printf("ft_atoi: %d\n\n", atoi("9223372036854775807"));
 //
 // 	printf("ft_atoi: %d\n", ft_atoi("A"));
 // 	printf("ft_atoi: %d\n\n", atoi("A"));
