@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 18:30:52 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/11 17:06:30 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/14 19:21:55 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int		result;
-	int		sign;
-	size_t	i;
+	long		result;
+	long		sign;
+	size_t		i;
 
 	i = 0;
 	result = 0;
