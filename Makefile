@@ -11,6 +11,10 @@ SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 
 OBJS	=	$(SRCS:.c=.o)
 
+SRCS_B	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+
+OBJS_B	=	$(SRCS_B:.c=.o)
+
 ARC		=	ar -rcs
 
 RM		=	rm -rf
@@ -20,12 +24,16 @@ $(NAME): $(OBJS)
 	@$(ARC) $(NAME) $(OBJS)
 
 clean:
-	@$(RM) $(OBJS)
+	@$(RM) $(OBJS) $(OBJS_B) 
 
 fclean:
-	@$(RM) $(NAME) $(OBJS)
+	@$(RM) $(NAME) $(OBJS) $(OBJS_B)
 
 re: fclean all
+
+bonus:
+	$(NAME): $(OBJS_B)
+	@$(ARC) $(NAME) $(OBJS_B)
 
 norm:
 	@norminette -R CheckForbiddenSourceHeader *.c

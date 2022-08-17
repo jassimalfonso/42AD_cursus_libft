@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 18:30:52 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/15 18:28:15 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:09:15 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	ft_atoi(const char *nptr)
 // 	printf("ft_atoi: %d\n", ft_atoi("0"));
 // 	printf("ft_atoi: %d\n\n", atoi("0"));
 //
-// 	printf("ft_atoi: %d\n", ft_atoi("2147483647"));
+// 	printf("ft_atoi: %d\n", ft_atoi("0000147483647"));
 // 	printf("ft_atoi: %d\n\n", atoi("2147483647"));
 //
 // 	printf("ft_atoi: %d\n", ft_atoi("-9223372036854775808"));

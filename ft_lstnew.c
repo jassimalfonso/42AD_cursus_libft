@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/16 03:02:08 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/17 19:08:57 by jalfonso         ###   ########.fr       */
+/*   Created: 2022/08/17 14:01:47 by jalfonso          #+#    #+#             */
+/*   Updated: 2022/08/17 14:27:23 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void	*ptr;
+	t_list	*node;
 
-	if (size == SIZE_MAX && count > 1)
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	ptr = (void *)malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
 
 // #include <stdio.h>
-// #include <string.h>
-//
+
 // int	main(void)
 // {
-// 	char	*s1;
-// 	char	*s2;
-// 	size_t	n;
-//
-// 	s1 = "Hello there, this is a string.";
-// 	n = strlen(s1);
-// 	s2 = (char *)ft_calloc(n, sizeof(*s1));
-// 	printf("%s\n", strncpy(s2, s1, 10));
+// 	t_list *list;
+// 	list = ft_lstnew((int *)32);
+// 	printf("%d\n", (int)list->content);
 // 	return (0);
 // }

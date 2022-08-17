@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/16 03:02:08 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/17 19:08:57 by jalfonso         ###   ########.fr       */
+/*   Created: 2022/08/17 17:16:49 by jalfonso          #+#    #+#             */
+/*   Updated: 2022/08/17 17:39:04 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstlast(t_list *lst)
 {
-	void	*ptr;
-
-	if (size == SIZE_MAX && count > 1)
-		return (NULL);
-	ptr = (void *)malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	if (!lst)
+		return (0);
+	while (lst)
+		lst = lst->next;
+	return (lst);
 }
 
 // #include <stdio.h>
-// #include <string.h>
 //
 // int	main(void)
 // {
-// 	char	*s1;
-// 	char	*s2;
-// 	size_t	n;
+// 	t_list *a;
+// 	t_list *b;
 //
-// 	s1 = "Hello there, this is a string.";
-// 	n = strlen(s1);
-// 	s2 = (char *)ft_calloc(n, sizeof(*s1));
-// 	printf("%s\n", strncpy(s2, s1, 10));
+// 	a = ft_lstnew((int *)24);
+// 	b = ft_lstlast(a);
+// 	printf("%d\n",(int)a->content);
+// 	ft_lstadd_front(&a, ft_lstnew((int *)42));
+// 	// printf("%d\n",(int)a->content);
+// 	// printf("%d\n",(int)a->next->content);
+// 	// printf("%d\n", ft_lstsize(a));
+// 	printf("%d\n", (int)b->content);
 // 	return (0);
 // }
