@@ -11,7 +11,8 @@ SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 
 OBJS	=	$(SRCS:.c=.o)
 
-SRCS_B	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+SRCS_B	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+			ft_lstmap.c
 
 OBJS_B	=	$(SRCS_B:.c=.o)
 
@@ -31,11 +32,10 @@ fclean:
 
 re: fclean all
 
-bonus:
-	$(NAME): $(OBJS_B)
+bonus: $(NAME) $(OBJS_B)
 	@$(ARC) $(NAME) $(OBJS_B)
 
 norm:
-	@norminette -R CheckForbiddenSourceHeader *.c
+	@norminette -R CheckForbiddenSourceHeader *.c *.h
 	
 .PHONY: bonus all clean fclean re norm
