@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:01:47 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/17 14:27:23 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/18 10:22:29 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*node;
+	t_list	*new_node;
 
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	new_node->next = NULL;
+	new_node->content = content;
+	return (new_node);
 }
 
 // #include <stdio.h>
