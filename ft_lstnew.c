@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:01:47 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/18 10:22:29 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/18 18:44:20 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void *content)
 }
 
 // #include <stdio.h>
-
+//
 // int	main(void)
 // {
 // 	t_list *list;
