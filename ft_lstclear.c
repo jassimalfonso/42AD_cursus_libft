@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:41:04 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/18 21:46:24 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:30 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = temp_pos;
 	}
-	*lst = NULL;
+	*lst = FT_NULL;
 }
 
 // #include <stdio.h>

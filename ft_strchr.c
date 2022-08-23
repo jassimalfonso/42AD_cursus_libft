@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:54:13 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/10 16:49:59 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:22 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (!c)
 		return ((char *)s);
-	return (NULL);
+	return (FT_NULL);
 }
 
 // #include <stdio.h>

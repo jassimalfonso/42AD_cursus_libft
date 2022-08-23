@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:22:51 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/23 04:01:03 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:22 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static	char	**free_up_allocation(char **array_array)
 		i++;
 	}
 	free (array_array);
-	return (NULL);
+	return (FT_NULL);
 }
 
 static	char	*get_the_string(char const *str, char character)
@@ -77,7 +77,7 @@ char	**ft_split(char const *s, char c)
 	num_of_strings = string_count(s, c);
 	container = (char **)malloc(sizeof(s) * (num_of_strings + 1));
 	if (!container)
-		return (NULL);
+		return (FT_NULL);
 	i = 0;
 	j = 0;
 	while (i < num_of_strings)
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 			j++;
 		i++;
 	}
-	container[i] = NULL;
+	container[i] = FT_NULL;
 	return (container);
 }
 

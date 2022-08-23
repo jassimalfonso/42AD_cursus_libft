@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 19:10:36 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/11 00:15:53 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:16 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (new_s + i);
 		i++;
 	}
-	return (NULL);
+	return (FT_NULL);
 }
 
 // #include <stdio.h>

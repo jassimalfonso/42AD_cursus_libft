@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 20:20:10 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/10 23:40:07 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:38:00 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 			return (new_s + pos);
 		pos--;
 	}
-	return (NULL);
+	return (FT_NULL);
 }
 
 // #include <stdio.h>
@@ -39,7 +39,7 @@ char	*ft_strrchr(const char *s, int c)
 // {
 // 	char *str;
 // 	str = "Hello.com";
-//	
+//
 // 	printf("ft_strrchr: %s\n", ft_strrchr(str, 'l'));
 // 	printf("strrchr: %s\n", strrchr(str, 'l'));
 // 	return (0);

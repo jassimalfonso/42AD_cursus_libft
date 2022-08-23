@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 10:24:33 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/23 04:00:42 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:04 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	num = n;
 	new_s = (char *)malloc((sizeof(char) * len) + 1);
 	if (!new_s)
-		return (NULL);
+		return (FT_NULL);
 	if (num < 0)
 	{
 		new_s[0] = '-';

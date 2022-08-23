@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 02:12:51 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/10 02:00:52 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:21 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	new_d = (unsigned char *)dest;
 	new_s = (unsigned const char *)src;
 	if (!dest && !src)
-		return (NULL);
+		return (FT_NULL);
 	else if (new_d < new_s)
 		while (n--)
 			*new_d++ = *new_s++;

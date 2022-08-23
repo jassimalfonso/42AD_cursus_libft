@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 00:02:43 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/11 16:54:41 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:25 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		}
 		i++;
 	}
-	return (NULL);
+	return (FT_NULL);
 }
 
 // #include <stdio.h>

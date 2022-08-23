@@ -26,14 +26,14 @@ $(NAME): $(OBJS)
 	@$(ARC) $(NAME) $(OBJS)
 
 clean:
-	@$(RM) $(OBJS) $(OBJS_B) 
+	@$(RM) $(OBJS) $(OBJS_B)
 
 fclean:
 	@$(RM) $(NAME) $(OBJS) $(OBJS_B)
 
 re: fclean all
 
-.c.o : $(SRCS) $(INCLUDE)
+.c.o: $(SRCS) $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 bonus: $(NAME) $(OBJS_B)
@@ -41,5 +41,5 @@ bonus: $(NAME) $(OBJS_B)
 
 norm:
 	@norminette -R CheckForbiddenSourceHeader *.c *.h
-	
+
 .PHONY: bonus all clean fclean re norm

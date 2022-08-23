@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 22:00:49 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/12 00:57:24 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:26:26 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	sub_s = (char *)malloc(len * sizeof(*s) + 1);
 	if (!sub_s)
-		return (NULL);
+		return (FT_NULL);
 	ft_memmove (sub_s, s + start, len);
 	sub_s[len] = '\0';
 	return (sub_s);

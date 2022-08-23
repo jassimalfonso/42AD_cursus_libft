@@ -6,17 +6,19 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 01:38:29 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/18 23:00:20 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:39:58 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
+# include <limits.h>
+
+# define FT_NULL NULL
 
 int		ft_isalpha(int n);
 int		ft_isdigit(int n);
