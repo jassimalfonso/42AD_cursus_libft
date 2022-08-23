@@ -6,13 +6,13 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:22:51 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/15 16:55:35 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 04:01:03 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	string_count(char const *s, char c)
+static	size_t	string_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	num_of_strings;
@@ -33,7 +33,7 @@ size_t	string_count(char const *s, char c)
 	return (num_of_strings);
 }
 
-char	**free_up_allocation(char **array_array)
+static	char	**free_up_allocation(char **array_array)
 {
 	size_t	i;
 
@@ -47,7 +47,7 @@ char	**free_up_allocation(char **array_array)
 	return (NULL);
 }
 
-char	*get_the_string(char const *str, char character)
+static	char	*get_the_string(char const *str, char character)
 {
 	size_t	begin_string;
 	size_t	char_count;

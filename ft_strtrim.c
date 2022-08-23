@@ -6,13 +6,25 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 01:58:47 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/15 17:27:11 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 03:58:16 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	in_set(char c, char const *set_list);
+static	int	in_set(char c, char const *set_list)
+{
+	size_t	i;
+
+	i = 0;
+	while (set_list[i])
+	{
+		if (set_list[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -37,20 +49,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		new_s[count++] = s1[begin++];
 	new_s[count] = '\0';
 	return (new_s);
-}
-
-int	in_set(char c, char const *set_list)
-{
-	size_t	i;
-
-	i = 0;
-	while (set_list[i])
-	{
-		if (set_list[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
 }
 
 // #include <stdio.h>

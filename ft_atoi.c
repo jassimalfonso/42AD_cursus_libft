@@ -6,13 +6,13 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 18:30:52 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/17 19:09:15 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 03:53:17 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	num_long(unsigned long num, int sign)
+static int	num_long(unsigned long num, int sign)
 {
 	if (num >= 9223372036854775807 && sign == 1)
 		return (-1);

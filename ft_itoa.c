@@ -6,13 +6,13 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 10:24:33 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/14 14:18:30 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 04:00:42 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	find_len(int num)
+static	size_t	find_len(int num)
 {
 	size_t	len;
 
