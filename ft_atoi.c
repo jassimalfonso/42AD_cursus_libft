@@ -6,7 +6,7 @@
 /*   By: jalfonso <jalfonso@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 18:30:52 by jalfonso          #+#    #+#             */
-/*   Updated: 2022/08/23 15:50:00 by jalfonso         ###   ########.fr       */
+/*   Updated: 2022/08/23 16:05:45 by jalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	num_long(unsigned long num, int sign)
 
 int	ft_atoi(const char *nptr)
 {
-	int	sign;
+	int		sign;
 	size_t	i;
 	size_t	result;
 
